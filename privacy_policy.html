@@ -12,24 +12,28 @@
     }
 
     /* Default link style */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Light mode: Blue text */
+@media (prefers-color-scheme: light) {
     a {
-        text-decoration: none;
-        font-weight: bold;
+        color: #007bff; /* Blue text */
+        text-decoration: underline;
     }
+}
 
-    /* Light mode link color */
-    @media (prefers-color-scheme: light) {
-        a {
-            color: #007bff; /* Blue */
-        }
+/* Dark mode: White text with blue underline */
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #ffffff; /* White text */
+        text-decoration: underline;
+        text-decoration-color: #007bff; /* Blue underline */
     }
+}
 
-    /* Dark mode link color */
-    @media (prefers-color-scheme: dark) {
-        a {
-            color: #66c2ff; /* Light Blue */
-        }
-    }
 </style>
 </head>
 
